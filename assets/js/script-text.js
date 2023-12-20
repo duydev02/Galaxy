@@ -57,7 +57,7 @@ class TextScramble {
   const differenceInDays = Math.floor((currentDate - referenceDate) / (1000 * 60 * 60 * 24));
 
   const phrases = [
-    'Đếm / ngày xa em :(',
+    'Đếm ngày xa em :(',
     `${differenceInDays} days?`,
     '@duydev02'
   ]
@@ -70,6 +70,7 @@ class TextScramble {
     fx.setText(phrases[counter]).then(() => {
       setTimeout(next, 2000)
     })
+    document.getElementById('dynamicTitle').innerText = phrases[counter]
     counter = (counter + 1) % phrases.length
   }
   
